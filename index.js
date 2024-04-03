@@ -21,12 +21,47 @@ else {
 
  }
 
-//  console.log(getComputerChoice())
 
-  function getPlayerChoice() {
-  let UserInput = prompt("What would you like to play?")
-  return UserInput.toLowerCase().trim()
+const main = document.getElementById("choice")
+
+const buttonRock = document.createElement("button")
+buttonRock.textContent = "ROCK!"
+buttonRock.onclick = rock 
+
+const buttonPaper = document.createElement("button")
+buttonPaper.textContent = "PAPER!"
+buttonPaper.onclick = paper
+
+const buttonScissors = document.createElement("button")
+buttonScissors.textContent = "SCISSORS!"
+buttonScissors.onclick = scissors
+
+function rock(){
+  PlayerChoice = "rock"
+  console.log(playRound(getComputerChoice(),"rock"))
 }
+
+function paper(){
+  PlayerChoice = "paper"
+  console.log(playRound(getComputerChoice(),"paper"))
+}
+
+function scissors(){
+  PlayerChoice = "scissors"
+  console.log(playRound(getComputerChoice(),"scissors"))
+}
+
+choice.appendChild(buttonPaper)
+choice.appendChild(buttonScissors)
+choice.appendChild(buttonRock)
+
+
+ //  console.log(getComputerChoice())
+
+//   function getPlayerChoice() {
+//   let UserInput = prompt("What would you like to play?")
+//   return UserInput.toLowerCase().trim()
+// }
 
 //  console.log (getPlayerChoice())
 
@@ -68,11 +103,13 @@ else if (ComputerChoice == "rock" && PlayerChoice == "scissors") {
   }
 }
 
-for (let index = 0; index < 5; index++) {
+// for (let index = 0; index < 5; index++) {
     
-     console.log(playRound(getComputerChoice(),getPlayerChoice()))
+//      console.log(playRound(getComputerChoice(),getPlayerChoice()))
 
     
-}
+// }
 
-console.log(playerScore == ComputerScore?"The game was a draw": ((playerScore > ComputerScore?"player ": "computer ") + "Wins the game!"))
+// console.log(playRound(getComputerChoice(),PlayerChoice))
+
+// console.log(playerScore == ComputerScore?"The game was a draw": ((playerScore > ComputerScore?"player ": "computer ") + "Wins the game!"))
